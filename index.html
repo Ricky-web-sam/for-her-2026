@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026: Our New Chapter ❤️</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        body { margin: 0; background: #020617; color: white; font-family: 'Segoe UI', sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; text-align: center; }
+        .box { padding: 40px; border: 2px solid #38bdf8; border-radius: 24px; background: rgba(15, 23, 42, 0.8); box-shadow: 0 0 50px rgba(56, 189, 248, 0.3); width: 80%; max-width: 450px; }
+        h1 { font-size: 2.2rem; color: #38bdf8; margin-bottom: 10px; }
+        p { font-size: 1.1rem; color: #94a3b8; line-height: 1.6; }
+        .btn { background: #38bdf8; color: #020617; border: none; padding: 16px 32px; border-radius: 12px; font-weight: bold; cursor: pointer; font-size: 1.1rem; margin-top: 20px; transition: 0.3s; }
+        .btn:hover { background: #7dd3fc; transform: scale(1.05); }
+        #final-message { display: none; margin-top: 30px; border-top: 1px solid #334155; padding-top: 20px; animation: slideUp 1s ease-out; }
+        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1 id="title">2026 is Loading... ⏳</h1>
+    <p>I designed this page to tell you something special as we start a new year.</p>
+    
+    <button class="btn" onclick="openSurprise()">Click for your Surprise</button>
+
+    <div id="final-message">
+        <h2>Happy New Year! ❤️</h2>
+        <p>I'm studying structures at NIT, but you are the only one who keeps me balanced. Let's build a beautiful 2026 together!</p>
+        <p style="color: #38bdf8; font-weight: bold;">I Love You!</p>
+    </div>
+</div>
+
+<script>
+    function openSurprise() {
+        confetti({
+            particleCount: 200,
+            spread: 80,
+            origin: { y: 0.6 },
+            colors: ['#38bdf8', '#ffffff', '#6366f1']
+        });
+        document.getElementById('title').innerHTML = "HAPPY NEW YEAR! 🎆";
+        document.getElementById('final-message').style.display = "block";
+        document.querySelector('.btn').style.display = "none";
+    }
+</script>
+
+</body>
+</html>
